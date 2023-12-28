@@ -40,7 +40,8 @@
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: #cfd8dc;
+  background: #D3D3D3;
+  opacity: .5;
   }
 
   .nav-bar ul {
