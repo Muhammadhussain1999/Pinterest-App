@@ -1,13 +1,13 @@
-export default function Header(props) {
+export default function Header() {
     return (
       <nav className="nav-bar ">
-        <p><img src={props.reactlogo} alt={props.logoName} height="40"/></p>
+        <img src={require('../assests/images/logo192.png')} height="30"/>
         <ul>
           <li>
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <a href="contact-us">Contact</a>
           </li>
         </ul>
       </nav>
