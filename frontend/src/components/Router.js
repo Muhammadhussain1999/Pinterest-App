@@ -2,6 +2,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
+import ProductDetails from "../pages/ProductDetails";
 // import logo from './assests/images/logo192.png'
 //import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
@@ -38,6 +39,14 @@ export default function Router() {
         {
           path: "contact-us",
           element: <Contact />,
+        },
+        {
+          path: "Product/",
+          element: <ProductDetails />,
+        },
+        {
+          path: "Product/:id",
+          element: <ProductDetails />,
         },
       ],
     },
