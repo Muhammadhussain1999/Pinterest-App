@@ -119,3 +119,51 @@
   text-align: center;
   margin-top: 8px;
 }
+.contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contactForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contactForm button:hover {
+  background-color: #45a049;
+}
+
+/* Optional: Add some styling for validation or error messages */
+.contactForm input:invalid,
+.contactForm textarea:invalid {
+  border-color: #e74c3c;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.required {
+  color: red;
+}
