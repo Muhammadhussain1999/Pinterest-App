@@ -40,7 +40,7 @@ export default function Contact() {
     //   message: message,
     // };
     await axiox
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get("http://localhost:4000/users")
       .then((res) => {
         if (processing) {
           setSelectData(res.data);
@@ -48,6 +48,15 @@ export default function Contact() {
       })
       .catch((err) => console.log(err));
   };
+  const axioxPostData=async()=>{
+const postData={
+  email:email,
+  website:selectValue,
+  message:message
+
+}
+await axiox.post('http://localhost:4000/contact',postData).then(res => setError(<p className="success">{res.data}</p>))
+  }
 
   const SelectDropdown = () => {
     return (
@@ -73,7 +82,10 @@ export default function Contact() {
     } else {
       setError("");
     }
+    setError('')
+    axioxPostData()
   };
+ 
 
   return (
     <>
