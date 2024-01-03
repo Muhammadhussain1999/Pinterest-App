@@ -5,7 +5,7 @@ import Context from "./components/Context";
 // import Contact from "./pages/Contact";
 // import Home from "./pages/Home";
 // import Footer from "./components/Footer";
-// // import logo from './assests/images/logo192.png'
+ // import logo from './assests/images/logo192.png'
 // import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 function App() {
   const userInfo = {

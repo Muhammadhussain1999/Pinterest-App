@@ -24,11 +24,11 @@ router.post("/contact/:a", async (req, res) => {
 
   res.end;
 });
-router.get("/users", async(req, res) => {
-  const users= Schemas.Users
-  const userData= await users.find({}).exec()
-  if(userData){
-    res.send(JSON.stringify(userData))
+router.get("/users", async (req, res) => {
+  const users = Schemas.Users;
+  const userData = await users.find({}).exec();
+  if (userData) {
+    res.send(JSON.stringify(userData));
   }
 
   // const userData = [
@@ -125,6 +125,20 @@ router.get("/users", async(req, res) => {
   //     },
   //   },
   // ];
-  res.send(userData);
+  // res.send(userData);
+});
+router.post("/addusers", async (req, res) => {
+const userData = {name: 'Saad Khan',
+email: "ksaad79@gmail.com",
+website: "http://abc.com"}
+const users = Schemas.Users;
+  const newEntry = new users(userData);
+  const saveEntry = await newEntry.save();
+  if (saveEntry) {
+    res.send("User added");
+  } else {
+    res.send("Failed to add user");
+  }
+  res.end;
 });
 module.exports = router;
